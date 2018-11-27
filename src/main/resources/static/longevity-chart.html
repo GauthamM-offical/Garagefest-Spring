@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js h-100" lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,8 +12,6 @@
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="styles/shards-dashboards.1.1.0.min.css">
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
-    <script src="scripts/garagefest.js"></script> 
   </head>
   <body class="h-100">
     <div class="color-switcher animated">
@@ -37,7 +35,7 @@
         <li class="accent-danger" data-color="danger">
           <i class="material-icons">check</i>
         </li>
-      </ul>      
+      </ul>
       <div class="close">
         <i class="material-icons">close</i>
       </div>
@@ -53,7 +51,7 @@
             <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
               <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
                 <div class="d-table m-auto">
-                  <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/enRich2.png" alt="enRich">
+                  <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/enRich2.png" alt="Shards Dashboard">
                   <span class="d-none d-md-inline ml-1">enRich</span>
                 </div>
               </a>
@@ -74,13 +72,13 @@
           <div class="nav-wrapper">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link " href="home.html">
+                <a class="nav-link" href="home.html">
                   <i class="material-icons">edit</i>
                   <span>Advisor Dashboard</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="components-blog-posts.html">
+                <a class="nav-link " href="components-blog-posts.html">
                   <i class="material-icons">vertical_split</i>
                   <span>Blog Posts</span>
                 </a>
@@ -183,160 +181,80 @@
           <div class="main-content-container container-fluid px-4">
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
-              <div class="col-6 col-sm-6 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">Blog Posts</span>
-                <h3 class="page-title">Personal</h3>
-              </div>
-              <div class="col-6 col-sm-6 text-center text-sm-left mb-0">                              
-              <a href="add-new-post.html" class="btn btn-warning float-right" role="button"><i class="material-icons">note_add</i>
-                  <span>Add New Post</span></a>                           
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <span class="text-uppercase page-subtitle">Dashboard</span>
+                <h3 class="page-title">Blog Overview</h3>
               </div>
             </div>
             <!-- End Page Header -->
-            <div id = "personal_posts" class="row">	              
-            </div>
-            <h4 class="page-title">Others</h4>
-            <div id = "others_posts" class="row">                      
+            <!-- Small Stats Blocks -->
+
+            <!-- End Small Stats Blocks -->
+            <div class="row">
+              <!-- Users Stats -->
+              <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
+                <div class="card card-small">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Client Longeviy</h6>
+                  </div>
+                  <div class="card-body pt-0">
+                    <div class="row border-bottom py-2 bg-light">
+                      <div class="col-12 col-sm-6">
+                        <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
+                          <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
+                          <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
+                          <span class="input-group-append">
+                            <span class="input-group-text">
+                              <i class="material-icons"></i>
+                            </span>
+                          </span>
+                        </div>
+                      </div>                      
+                    </div>
+                    <canvas height="130" style="max-width: 100% !important;" class="blog-overview-users"></canvas>
+                  </div>
+                </div>
+              </div>
+              <!-- End Users Stats -->
+              <!-- Users By Device Stats -->
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-small h-100">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Details</h6>
+                  </div>       
+                </div>
+              </div>
+              <!-- End Users By Device Stats -->
+              <!-- New Draft Component -->
+              
             </div>
             <div class="row">
-              <div class="col-lg-4">
-                <div class="card card-small card-post mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Had denoting properly jointure which well books beyond</h5>
-                    <p class="card-text text-muted"> In said to of poor full be post face snug. Introduced imprudence see say unpleasing devonshire acceptance son. Exeter longer...</p>
-                  </div>
-                  <div class="card-footer border-top d-flex">
-                    <div class="card-post__author d-flex">
-                      <a href="#" class="card-post__author-avatar card-post__author-avatar--small" style="background-image: url('images/avatars/1.jpg');">Written by James Khan</a>
-                      <div class="d-flex flex-column justify-content-center ml-3">
-                        <span class="card-post__author-name">James Khan</span>
-                        <small class="text-muted">21 March 2011</small>
-                      </div>
-                    </div>
-                    <div class="my-auto ml-auto">
-                      <a class="btn btn-sm btn-white" href="#">
-                        <i class="far fa-bookmark mr-1"></i> Bookmark </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card card-small card-post mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Husbands ask repeated resolved but laughter debating</h5>
-                    <p class="card-text text-muted">It abode words began enjoy years no do ﻿no. Tried spoil as heart visit blush or. Boy possible blessing sensible set but margaret interest. Off tears...</p>
-                  </div>
-                  <div class="card-footer border-top d-flex">
-                    <div class="card-post__author d-flex">
-                      <a href="#" class="card-post__author-avatar card-post__author-avatar--small" style="background-image: url('images/avatars/2.jpg');">Written by Anna Kunis</a>
-                      <div class="d-flex flex-column justify-content-center ml-3">
-                        <span class="card-post__author-name">Chris Jones</span>
-                        <small class="text-muted">21 March 2011</small>
-                      </div>
-                    </div>
-                    <div class="my-auto ml-auto">
-                      <a class="btn btn-sm btn-white" href="#">
-                        <i class="far fa-bookmark mr-1"></i> Bookmark </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card card-small card-post mb-4">
-                  <div class="card-body">
-                    <h5 class="card-title">Instantly gentleman contained belonging exquisite now direction</h5>
-                    <p class="card-text text-muted">West room at sent if year. Numerous indulged distance old law you. Total state as merit court green decay he. Steepest merit checking railway...</p>
-                  </div>
-                  <div class="card-footer border-top d-flex">
-                    <div class="card-post__author d-flex">
-                      <a href="#" class="card-post__author-avatar card-post__author-avatar--small" style="background-image: url('images/avatars/3.jpg');">Written by Anna Kunis</a>
-                      <div class="d-flex flex-column justify-content-center ml-3">
-                        <span class="card-post__author-name">Mark Jameson</span>
-                        <small class="text-muted">21 March 2011</small>
-                      </div>
-                    </div>
-                    <div class="my-auto ml-auto">
-                      <a class="btn btn-sm btn-white" href="#">
-                        <i class="far fa-bookmark mr-1"></i> Bookmark </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+	            <div class="col-md-12">
+	                <!-- Quick Post -->
+	                <div class="card">
+	                  <div class="card-header border-bottom">
+	                    <h6 class="m-0">Quick notes</h6>
+	                  </div>
+	                  <div class="card-body d-flex flex-column">
+	                    <form class="quick-post-form">                      
+	                      <div class="form-group">
+	                        <textarea class="form-control" placeholder="Add some quick notes..."></textarea>
+	                      </div>
+	                      <div class="form-group mb-0">
+	                        <button type="submit" class="btn btn-accent">Add notes</button>
+	                      </div>
+	                    </form>
+	                  </div>
+	                </div>
+	                <!-- End Quick Post -->
+	              </div>
             </div>
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card card-small card-post h-100">
-                  <div class="card-post__image" style="background-image: url('images/content-management/7.jpeg');"></div>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a class="text-fiord-blue" href="#">Extremity so attending objection as engrossed</a>
-                    </h5>
-                    <p class="card-text">Morning prudent removal an letters by. On could my in order never it. Or excited certain sixteen it to parties colonel not seeing...</p>
-                  </div>
-                  <div class="card-footer text-muted border-top py-3">
-                    <span class="d-inline-block">By
-                      <a class="text-fiord-blue" href="#">Alene Trenton</a> in
-                      <a class="text-fiord-blue" href="#">News</a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card card-small card-post h-100">
-                  <div class="card-post__image" style="background-image: url('images/content-management/8.jpeg');"></div>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a class="text-fiord-blue" href="#">Bed sincerity yet therefore forfeited his </a>
-                    </h5>
-                    <p class="card-text">Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing prudent waiting in be...</p>
-                  </div>
-                  <div class="card-footer text-muted border-top py-3">
-                    <span class="d-inline-block">By
-                      <a class="text-fiord-blue" href="#">Chris Jamie</a> in
-                      <a class="text-fiord-blue" href="#">News</a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card card-small card-post h-100">
-                  <div class="card-post__image" style="background-image: url('images/content-management/9.jpeg');"></div>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a class="text-fiord-blue" href="#">Object remark lively all did feebly excuse our</a>
-                    </h5>
-                    <p class="card-text">Speaking throwing breeding betrayed children my to. Me marianne no he horrible produced ye. Sufficient unpleasing and...</p>
-                  </div>
-                  <div class="card-footer text-muted border-top py-3">
-                    <span class="d-inline-block">By
-                      <a class="text-fiord-blue" href="#">Monica Jordan</a> in
-                      <a class="text-fiord-blue" href="#">News</a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
-                <div class="card card-small card-post h-100">
-                  <div class="card-post__image" style="background-image: url('images/content-management/10.jpeg');"></div>
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      <a class="text-fiord-blue" href="#">His followed carriage proposal entrance</a>
-                    </h5>
-                    <p class="card-text">For county now sister engage had season better had waited. Occasional mrs interested far expression directly as regard...</p>
-                  </div>
-                  <div class="card-footer text-muted border-top py-3">
-                    <span class="d-inline-block">By
-                      <a class="text-fiord-blue" href="#">Monica Jordan</a> in
-                      <a class="text-fiord-blue" href="#">News</a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>          
+            <br>
+          </div>
         </main>
       </div>
-    </div>   
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
@@ -344,5 +262,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>
     <script src="scripts/extras.1.1.0.min.js"></script>
     <script src="scripts/shards-dashboards.1.1.0.min.js"></script>
+    <script src="scripts/app/app-blog-overview.1.1.0.js"></script>
   </body>
 </html>
