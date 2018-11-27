@@ -15,3 +15,5 @@ insert into blogpost (user_name,blog_title,blog_text,created_date) values('Test2
 insert into blogpost (user_name,blog_title,blog_text,created_date) values('Test1','Finished','<p>Thank you</p>','2018-11-25');
 
 insert into blogpost (user_name,blog_title,blog_text,created_date) values('Test1','Test','<p>Testttwtwqqywyqtwyqywtyqtwy</p>','2018-11-25');
+
+insert into blogpost (user_name,blog_title,blog_text,created_date) values('Test1','US Market Crash : Future of Asset Management institutes?','<p>X-ray CT-Scan</p>','2018-11-27');
