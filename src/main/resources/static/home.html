@@ -14,6 +14,7 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
     <script src="scripts/garagefest/longevity.js"></script>
+    <script src="scripts/garagefest/productusage.js"></script>
   </head>
   <body class="h-100">
     <div class="color-switcher animated">
@@ -86,7 +87,7 @@
                 </a>
               </li>              
               <li class="nav-item">
-                <a class="nav-link " href="form-components.html">
+                <a class="nav-link " href="platform-features.html">
                   <i class="material-icons">view_module</i>
                   <span>Platform News</span>
                 </a>
@@ -184,8 +185,7 @@
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">Dashboard</span>
-                <h3 class="page-title">Blog Overview</h3>
+                <h3 class="page-title">Dashboard</h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -196,8 +196,8 @@
                   <div class="card-body p-0 d-flex">
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Posts</span>
-                        <h6 class="stats-small__value count my-3">2,390</h6>
+                        <span class="stats-small__label text-uppercase">Proposal Conversion Rate</span>
+                        <h6 class="stats-small__value count my-3">77%</h6>
                       </div>
                       <div class="stats-small__data">
                         <span class="stats-small__percentage stats-small__percentage--increase">4.7%</span>
@@ -212,11 +212,11 @@
                   <div class="card-body p-0 d-flex">
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Pages</span>
-                        <h6 class="stats-small__value count my-3">182</h6>
+                        <span class="stats-small__label text-uppercase">Client retention Rate</span>
+                        <h6 class="stats-small__value count my-3">87%</h6>
                       </div>
                       <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                        <span class="stats-small__percentage stats-small__percentage--increase">1.2%</span>
                       </div>
                     </div>
                     <canvas height="120" class="blog-overview-stats-small-2"></canvas>
@@ -228,11 +228,11 @@
                   <div class="card-body p-0 d-flex">
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Comments</span>
-                        <h6 class="stats-small__value count my-3">8,147</h6>
+                        <span class="stats-small__label text-uppercase">Assets Under Management</span>
+                        <h6 class="stats-small__value count my-3">10.2M</h6>
                       </div>
                       <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--decrease">3.8%</span>
+                        <span class="stats-small__percentage stats-small__percentage--decrease">1.5%</span>
                       </div>
                     </div>
                     <canvas height="120" class="blog-overview-stats-small-3"></canvas>
@@ -244,33 +244,18 @@
                   <div class="card-body p-0 d-flex">
                     <div class="d-flex flex-column m-auto">
                       <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Users</span>
-                        <h6 class="stats-small__value count my-3">2,413</h6>
+                        <span class="stats-small__label text-uppercase">Active Accounts</span>
+                        <h6 class="stats-small__value count my-3">112</h6>
                       </div>
                       <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--increase">12.4%</span>
+                        <span class="stats-small__percentage stats-small__percentage--increase">8.4%</span>
                       </div>
                     </div>
                     <canvas height="120" class="blog-overview-stats-small-4"></canvas>
                   </div>
                 </div>
               </div>
-              <div class="col-lg col-md-4 col-sm-12 mb-4">
-                <div class="stats-small stats-small--1 card card-small">
-                  <div class="card-body p-0 d-flex">
-                    <div class="d-flex flex-column m-auto">
-                      <div class="stats-small__data text-center">
-                        <span class="stats-small__label text-uppercase">Subscribers</span>
-                        <h6 class="stats-small__value count my-3">17,281</h6>
-                      </div>
-                      <div class="stats-small__data">
-                        <span class="stats-small__percentage stats-small__percentage--decrease">2.4%</span>
-                      </div>
-                    </div>
-                    <canvas height="120" class="blog-overview-stats-small-5"></canvas>
-                  </div>
-                </div>
-              </div>
+             
             </div>
             <!-- End Small Stats Blocks -->
             <div class="row">
@@ -278,7 +263,8 @@
               <div class="col-lg-8 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Users</h6>
+                    <h6 class="m-0">Latest Report</h6>
+                    <span class="stats-small__label text-uppercase">Client longevity</span>
                   </div>
                   <div class="card-body pt-0">
                     <div class="row border-bottom py-2 bg-light">
@@ -306,10 +292,10 @@
               <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
                 <div class="card card-small h-100">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Users by device</h6>
+                    <h6 class="m-0">Product Type Distribution</h6>
                   </div>
                   <div class="card-body d-flex py-0">
-                    <canvas height="220" class="blog-users-by-device m-auto"></canvas>
+                    <canvas id="productusage" height="220" class="blog-users-by-device m-auto"></canvas>
                   </div>
                   <div class="card-footer border-top">
                     <div class="row">
@@ -356,7 +342,7 @@
               <div class="col-lg-5 col-md-12 col-sm-12 mb-4">
                 <div class="card card-small blog-comments">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Discussions</h6>
+                    <h6 class="m-0">Latest Platform Features</h6>
                   </div>
                   <div class="card-body p-0">
                     <div class="blog-comments__item d-flex p-3">
@@ -369,22 +355,7 @@
                           <span class="text-muted">– 3 days ago</span>
                         </div>
                         <p class="m-0 my-1 mb-2 text-muted">Well, the way they make shows is, they make one show ...</p>
-                        <div class="blog-comments__actions">
-                          <div class="btn-group btn-group-sm">
-                            <button type="button" class="btn btn-white">
-                              <span class="text-success">
-                                <i class="material-icons">check</i>
-                              </span> Approve </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-danger">
-                                <i class="material-icons">clear</i>
-                              </span> Reject </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-light">
-                                <i class="material-icons">more_vert</i>
-                              </span> Edit </button>
-                          </div>
-                        </div>
+
                       </div>
                     </div>
                     <div class="blog-comments__item d-flex p-3">
@@ -397,22 +368,7 @@
                           <span class="text-muted">– 4 days ago</span>
                         </div>
                         <p class="m-0 my-1 mb-2 text-muted">After the avalanche, it took us a week to climb out. Now...</p>
-                        <div class="blog-comments__actions">
-                          <div class="btn-group btn-group-sm">
-                            <button type="button" class="btn btn-white">
-                              <span class="text-success">
-                                <i class="material-icons">check</i>
-                              </span> Approve </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-danger">
-                                <i class="material-icons">clear</i>
-                              </span> Reject </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-light">
-                                <i class="material-icons">more_vert</i>
-                              </span> Edit </button>
-                          </div>
-                        </div>
+                        
                       </div>
                     </div>
                     <div class="blog-comments__item d-flex p-3">
@@ -425,29 +381,14 @@
                           <span class="text-muted">– 5 days ago</span>
                         </div>
                         <p class="m-0 my-1 mb-2 text-muted">My money's in that office, right? If she start giving me...</p>
-                        <div class="blog-comments__actions">
-                          <div class="btn-group btn-group-sm">
-                            <button type="button" class="btn btn-white">
-                              <span class="text-success">
-                                <i class="material-icons">check</i>
-                              </span> Approve </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-danger">
-                                <i class="material-icons">clear</i>
-                              </span> Reject </button>
-                            <button type="button" class="btn btn-white">
-                              <span class="text-light">
-                                <i class="material-icons">more_vert</i>
-                              </span> Edit </button>
-                          </div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>
                   <div class="card-footer border-top">
                     <div class="row">
                       <div class="col text-center view-report">
-                        <button type="submit" class="btn btn-white">View All Comments</button>
+                        <a href="platform-features.html" type="submit" class="btn btn-white">View More</a>
                       </div>
                     </div>
                   </div>
