@@ -86,7 +86,7 @@
                 </a>
               </li>              
               <li class="nav-item">
-                <a class="nav-link " href="platform-features.html">
+                <a class="nav-link " href="form-components.html">
                   <i class="material-icons">view_module</i>
                   <span>Platform News</span>
                 </a>
@@ -137,7 +137,7 @@
                       </div>
                       <div class="notification__content">
                         <span class="notification__category">Analytics</span>
-                        <p>Your website’s active users count increased by
+                        <p>Your websiteâ€™s active users count increased by
                           <span class="text-success text-semibold">28%</span> in the last week. Great job!</p>
                       </div>
                     </a>
@@ -149,7 +149,7 @@
                       </div>
                       <div class="notification__content">
                         <span class="notification__category">Sales</span>
-                        <p>Last week your store’s sales count decreased by
+                        <p>Last week your storeâ€™s sales count decreased by
                           <span class="text-danger text-semibold">5.52%</span>. It could have been worse!</p>
                       </div>
                     </a>
@@ -184,7 +184,8 @@
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <h3 class="page-title">Reports</h3>
+                <h3 class="page-title">Client Risk Report</h3>
+                <span class="lead text-uppercase ">Revenue Distribution by Risk</span>
               </div>
             </div>
             <!-- End Page Header -->
@@ -200,16 +201,25 @@
                   </div>
                   <div class="card-body pt-0">
                     <div class="row border-bottom py-2 bg-light">
-                      <div class="col-12 col-sm-6">
-                        <div id="blog-overview-date-range" class="input-daterange input-group input-group-sm my-auto ml-auto mr-auto ml-sm-auto mr-sm-0" style="max-width: 350px;">
-                          <input type="text" class="input-sm form-control" name="start" placeholder="Start Date" id="blog-overview-date-range-1">
-                          <input type="text" class="input-sm form-control" name="end" placeholder="End Date" id="blog-overview-date-range-2">
-                          <span class="input-group-append">
-                            <span class="input-group-text">
-                              <i class="material-icons"></i>
-                            </span>
-                          </span>
-                        </div>
+                      <div class="col-12 col-sm-12">
+                        <div class="input-group mb-12">
+    						<div class="input-group-prepend">
+    							<div class="btn-group">
+								    <button type="button" class="btn btn-outline-secondary">Advisor Average</button>
+								    <button type="button" class="btn btn-outline-secondary">Firm Average</button>
+								    <button type="button" class="btn btn-outline-secondary">Market Average</button>
+								    <div class="btn-group">
+								      <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">
+								      Risk Scale
+								      </button>
+								      <div class="dropdown-menu">
+								        <a class="dropdown-item" href="#">Tablet</a>
+								        <a class="dropdown-item" href="#">Smartphone</a>
+								      </div>
+								    </div>
+							  	</div>
+    						</div>    						
+    					</div>
                       </div>                      
                     </div>
                     <canvas id="riskband" height="130" style="max-width: 100% !important;" class="blog-overview-users"></canvas>
@@ -250,7 +260,51 @@
 	                <!-- End Quick Post -->
 	              </div>
             </div>
+            <!-- client revenue -->
             <br>
+            <div class="page-header row no-gutters py-4">
+              <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                <span class="lead text-uppercase ">Revenue Distribution by Risk</span>                
+              </div>
+            </div>
+          <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-small h-100">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Advisor</h6>
+                  </div>
+                  <div class="card-body d-flex py-0">
+                    <canvas height="220" class="advisorriskrevenue m-auto"></canvas>
+                  </div>
+                  <div class="card-footer border-top">                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-small h-100">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Firm</h6>
+                  </div>
+                  <div class="card-body d-flex py-0">
+                    <canvas height="220" class="firmriskrevenue m-auto"></canvas>
+                  </div>
+                  <div class="card-footer border-top">                    
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-small h-100">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Platform</h6>
+                  </div>
+                  <div class="card-body d-flex py-0">
+                    <canvas height="220" class="marketriskrevenue m-auto"></canvas>
+                  </div>
+                  <div class="card-footer border-top">                    
+                  </div>
+                </div>
+              </div>              
+          </div>
           </div>
         </main>
       </div>
