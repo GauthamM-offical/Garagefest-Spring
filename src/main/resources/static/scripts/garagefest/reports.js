@@ -1,10 +1,10 @@
 $( document ).ready(function() {		
           
 	//chart 1
-	var bouCtx = $("#longevity");
+	var lchart = $("#longevity");
 
     // Data
-    var bouData = {
+    var ldata = {
       // Generate the days labels on the X axis.
       labels: Array.from(new Array(30), function (_, i) {
         return i === 0 ? 1 : i;
@@ -37,7 +37,7 @@ $( document ).ready(function() {
     };
 
     // Options
-    var bouOptions = {
+    var loptions = {
       responsive: true,
       legend: {
         position: 'top'
@@ -90,20 +90,16 @@ $( document ).ready(function() {
     };
 
     // Generate the Analytics Overview chart.
-    window.BlogOverviewUsers = new Chart(bouCtx, {
+    lwindow= new Chart(lchart, {
       type: 'LineWithLine',
-      data: bouData,
-      options: bouOptions
+      data: ldata,
+      options: loptions
     });
 
-    // Hide initially the first and last analytics overview chart points.
-    // They can still be triggered on hover.
-    var aocMeta = BlogOverviewUsers.getDatasetMeta(0);
-    aocMeta.data[0]._model.radius = 0;
-    aocMeta.data[bouData.datasets[0].data.length - 1]._model.radius = 0;
+
 
     // Render the chart.
-    window.BlogOverviewUsers.render();
+    lwindow.render();
     
     
     
@@ -112,12 +108,12 @@ $( document ).ready(function() {
     
     //chart 2
     
-    var bouCtx = $("#riskband");
+    var rchart = $("#riskband");
 
     // Data
-    var bouData = {
+    var rdata = {
       // Generate the days labels on the X axis.
-      labels: ['1-20','21-40','41-55','56-70','71-85','Aggresive','Aggresive Growth'],
+      labels: ['1-20','21-35','36-55','56-65','66-75','76-85','86-100'],
       datasets: [{
         label: 'My accounts',
         fill: 'start',
@@ -159,7 +155,7 @@ $( document ).ready(function() {
     };
 
     // Options
-    var bouOptions = {
+    var roptions = {
       responsive: true,
       legend: {
         position: 'top'
@@ -174,11 +170,7 @@ $( document ).ready(function() {
         }
       },
       scales: {
-        xAxes: [{
-        	scaleLabel:{
-        		display:true,
-        		labelString:'Risk Scales'
-        	}
+        xAxes: [{        	
         	gridLines: false,
 	        ticks: {
 	        callback: function (tick, index) {
@@ -216,21 +208,14 @@ $( document ).ready(function() {
     };
 
     // Generate the Analytics Overview chart.
-    window.BlogOverviewUsers = new Chart(bouCtx, {
-      type: 'LineWithLine',
-      data: bouData,
-      options: bouOptions
+    rwindow= new Chart(rchart, {
+      type: 'bar',
+      data: rdata,
+      options: roptions
     });
 
-    // Hide initially the first and last analytics overview chart points.
-    // They can still be triggered on hover.
-    var aocMeta = BlogOverviewUsers.getDatasetMeta(0);
-    aocMeta.data[0]._model.radius = 0;
-    aocMeta.data[bouData.datasets[0].data.length - 1]._model.radius = 0;
+
 
     // Render the chart.
-    window.BlogOverviewUsers.render();
-    
-    
-    
+    rwindow.render();         
 });
