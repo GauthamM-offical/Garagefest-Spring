@@ -11,7 +11,7 @@ $( document ).ready(function() {
     function ajaxPost(){
     	
     	var formData = {
-    		userName:"Test1",
+    		userName:"Sierra",
     		blogContent:$(".ql-editor").html(),
 			blogTitle:$("#post-title").val()
     	}
@@ -59,7 +59,7 @@ $( document ).ready(function() {
 
 			        var $p_main=document.createElement("div");
 			        $p_main.setAttribute("id","p_main_"+i);
-			        $p_main.setAttribute("class","col-lg-3 col-md-6 col-sm-12 mb-4");
+			        $p_main.setAttribute("class","col-lg-6 col-md-6 col-sm-6");
 			        
 			        var $p_post=document.createElement("div");
 			        $p_post.setAttribute("id","p_post_"+i);
@@ -68,7 +68,7 @@ $( document ).ready(function() {
 			        var $p_image=document.createElement("div");
 			        $p_image.setAttribute("id","p_image_"+i);
 			        $p_image.setAttribute("class","card-post__image");
-			        $p_image.setAttribute("style","background-image: url('images/garagefest/default-user-imge.jpeg');");
+			        $p_image.setAttribute("style","background-image: url('images/avatars/0.jpg');");
 
 			        var $a0 =document.createElement("a");
 			        $a0.setAttribute("href","#");
@@ -210,24 +210,5 @@ $( document ).ready(function() {
 			}
 		});		
     }
-          
-    $("#login").click(function(){
-    	
-    	var username=$("#username").val();
-    	var password=$("#password").val();
-    	
-      
-    	if(username==='Test1'){
-    		if(password==='test'){    			
-    			document.location.href = "http://localhost:8080/garagefest/home.html";
-    		}else{
-    			alert("Invalid password");
-    			document.location.href = "http://localhost:8080/garagefest";
-    		}
-    	}else{
-    		alert("Invalid User");
-			document.location.href = "http://localhost:8080/garagefest";
-    	}
-    
-    });
+              
 });

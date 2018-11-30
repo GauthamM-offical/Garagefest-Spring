@@ -31,13 +31,13 @@ public class GaragefestController {
     @GetMapping("garagefest/getmypost")
     public List<BlogPost> retrieveMyBlogPost()
     {        
-        return postService.retrieveBlogPost("Test1");
+        return postService.retrieveBlogPost("Sierra");
     }
     
     @GetMapping("garagefest/getotherpost")
     public List<BlogPost> retrieveOtherBlogPost()
     {        
-        return postService.retrieveOtherBlogPost("Test1");
+        return postService.retrieveOtherBlogPost("Sierra");
     }
     
 }

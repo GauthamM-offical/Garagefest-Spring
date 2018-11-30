@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>   
-    <script src="scripts/garagefest/longevity.js"></script>
+    <script src="scripts/garagefest/risk-new.js"></script>
   </head>
   <body class="h-100">
     <div class="color-switcher animated">
@@ -184,31 +184,205 @@
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <h3 class="page-title">Reports</h3>
+                <h3 class="page-title">Earnings Report</h3>
               </div>
             </div>
+            <!-- End Page Header -->
+            <!-- Small Stats Blocks -->
+
+            <!-- End Small Stats Blocks -->
+
+			<div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-small h-100">
+                  <div class="card-header border-bottom" >
+                  <div class="row">
+                    <h6 class="m-0">&nbsp;&nbsp;&nbsp;&nbsp;Advisor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h6>
+                    <div ><span style="color:grey; font-size:9pt;" class="text-uppercase page-subtitle">Choose chart</span>
+					</div>
+                    <div align="right">
+                    <select id="charttype" >
+  <option value="pie">Pie</option>
+  <option value="doughnut">Doughnut</option>
+  <option value="radar">Radar</option>
+</select></div></div>
+                  </div>
+                  
+                  
+                  <div align="center" class="card-body d-flex py-0">                  	                                                      	
+                    <canvas id="riskadvisor" height="220" class="advisorriskrevenue m-auto"></canvas>                    
+                  </div>
+                  <div align="center" class="card-footer border-top">   
+                        <span id="info" style="color:grey; font-size:9pt;" class="text-uppercase page-subtitle">Click on any Risk category to know more</span>
+                       
+						<div style="display: none;" id="advdata">
+							<h5 id = "revenue" align="center"></h6>
+							<h6 style="color:blue;" align="center">Your top products which generate the most revenue in the chosen risk category</h6>
+							<table class="table mb-0">
+								<tbody>
+			                        <tr>
+			                          <td id="ap1"></td>
+			                          <td id="app1"></td>		                          
+			                        </tr>
+			                        <tr>
+			                          <td id="ap2"></td>
+			                          <td id="app2"></td>		                          
+			                        </tr>
+								</tbody>
+							</table>
+							<h6 style="color:red;" align="center">You may replace the following underperforming securities from your models</h6>
+							<table class="table mb-0">
+								<tbody>
+			                        <tr>
+			                          <td id="u1"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>	
+			                          <td></td>		                          			                          		                         
+			                          <td><span id="ut1" style="color:red;"></span></td>
+			                        </tr>
+			                        <tr>
+			                          <td id="u2"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>
+			                          <td></td>
+			                          <td><span id="ut2"style="color:red;"></span></td>
+			                        </tr>
+								</tbody>
+							</table>
+						</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-small h-100">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Firm</h6>
+                  </div>
+                  <div class="card-body d-flex py-0">
+                    <canvas id="riskfirm" height="220" class="firmriskrevenue m-auto"></canvas>
+                  </div>
+                  <div class="card-footer border-top">  
+                  <div style="display: none;" id="firmdata">							
+							<h6 style="color:red;" align="center">Top securities based on growth</h6>
+							<table class="table mb-0">
+								<tbody>
+			                        <tr>
+			                          <td id="f1"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>	
+			                          <td></td>		                          			                          		                         
+			                          <td><span id="ft1" style="color:green;"></span></td>
+			                        </tr>
+			                        <tr>
+			                          <td id="f2"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>
+			                          <td></td>
+			                          <td><span id="ft2" style="color:green;"></span></td>
+			                        </tr>		
+			                        <tr>
+			                          <td id="f3"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>	
+			                          <td></td>		                          			                          		                         
+			                          <td><span id="ft3" style="color:green;"></span></td>
+			                        </tr>	                    
+								</tbody>
+							</table>
+							<div id="fspace" style="display:none">
+                  			</div>
+						</div>                  
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <div class="card card-small h-100">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Platform</h6>
+                  </div>
+                  <div class="card-body d-flex py-0">
+                    <canvas id="riskplatform" height="220" class="marketriskrevenue m-auto"></canvas>
+                  </div>
+                  <div class="card-footer border-top">   
+                  <div style="display: none;" id="platformdata">							
+							<h6 style="color:red;" align="center">Top securities based on growth</h6>
+							<table class="table mb-0">
+								<tbody>
+			                        <tr>
+			                          <td id="p1"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>	
+			                          <td></td>		                          			                          		                         
+			                          <td><span id="pt1" style="color:green;"></span></td>
+			                        </tr>
+			                        <tr>
+			                          <td id="p2"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>
+			                          <td></td>
+			                          <td><span id="pt2"style="color:green;"></span></td>
+			                        </tr>
+			                        <tr>
+			                          <td id="p3"></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>
+			                          <td></td>	
+			                          <td></td>
+			                          <td></td>
+			                          <td><span id="pt3"style="color:green;"></span></td>
+		                        	</tr>		                     
+								</tbody>
+							</table>
+							<div id="pspace" style="display:none">
+                  			</div>
+						</div>                        
+                  </div>
+                </div>
+              </div>              
+          </div>
+
+
             <div class="row">
-            	<div class="col-lg-8 col-md-12 col-sm-12">                        
-            		<div class="row">
-              
-		              	<div class="col-lg-12 col-md-12 col-sm-12">
-		                	<div class="card card-small">
-		                  		<div class="card-header border-bottom">
-		                    		<h6 class="m-0">Client Longevity</h6>
-		                  		</div>
-		                  		<div class="card-body pt-0">
-		                    		<div class="row border-bottom py-2 bg-light">                    
-		                    		</div>
-		                    		<canvas id="longevity" height="190" style="max-width: 100% !important;" class="blog-overview-users"></canvas>
-		                  		</div>
-		                	</div>
-		              	</div>		              	
-              <!-- End Users Stats -->
-              <!-- Users By Device Stats -->
-				<div class="col-lg-12 col-md-12 col-sm-12">
+	            <div class="col-md-12">
 	                <!-- Quick Post -->
-	                <br>
-	                <br>
 	                <div class="card">
 	                  <div class="card-header border-bottom">
 	                    <h6 class="m-0">Quick notes</h6>
@@ -216,7 +390,7 @@
 	                  <div class="card-body d-flex flex-column">
 	                    <form class="quick-post-form">                      
 	                      <div class="form-group">
-	                        <textarea style="height:215px" class="form-control" placeholder="Add some quick notes..."></textarea>
+	                        <textarea class="form-control" placeholder="Add some quick notes..."></textarea>
 	                      </div>
 	                      <div class="form-group mb-0">
 	                        <button type="submit" class="btn btn-accent">Add notes</button>
@@ -226,96 +400,7 @@
 	                </div>
 	                <!-- End Quick Post -->
 	              </div>
-              		</div>
-              	</div>
-              <!-- quick notes -->
-              			<div class="col-lg-4 col-md-6 col-sm-6">
-                			<div class="card card-small h-100">
-                  				<div class="card-header border-bottom">
-                    				<h6 class="m-0">Details</h6>                    
-                  				</div>      
-                  				<ul class="list-group list-group-flush">
-                    				<li class="list-group-item p-4">
-                      					<span>The duration for which the client is under your management is compared against the firm and the industry average.</span>
-                      					<br>
-                      					<span>From the graph, it is visible that even though the number of clients under you with an account life span of 7-8 years is large, there is a dip in the count of clients who continue to be associated with you for more than 8 years. The firm and industry trends are also is in line with this.<br><br> We have listed down the top clients based on their investments with whom you have an association for 6-8 years</span>                      
-                    				</li>
-									<table class="table mb-0">
-                      					<thead class="bg-light">
-					                        <tr>
-					                          <th scope="col" class="border-bottom-0">#</th>
-					                          <th scope="col" class="border-bottom-0">First Name</th>
-					                          <th scope="col" class="border-bottom-0">Last Name</th>
-					                          <th scope="col" class="border-bottom-0">Years</th>		                          
-					                        </tr>
-                      					</thead>
-                      					<tbody>
-					                        <tr>
-					                          <td>1</td>
-					                          <td>Graham</td>
-					                          <td>Brent</td>		                          
-					                          <td>7.5</td>
-					                        </tr>
-					                        <tr>
-					                          <td>2</td>
-					                          <td>Clark</td>
-					                          <td>Angela</td>		                          
-					                          <td>7.5</td>
-					                        </tr>
-					                        <tr>
-					                          <td>3</td>
-					                          <td>Wylie</td>
-					                          <td>Joseph</td>		                          
-					                          <td>7.5</td>
-					                        </tr>		  
-					                        <tr>
-					                          <td>4</td>
-					                          <td>Marcelina</td>
-					                          <td>Swearegene</td>		                          
-					                          <td>7.2</td>
-					                        </tr>
-					                        <tr>
-					                          <td>5</td>
-					                          <td>Anisa</td>
-					                          <td>Dombrosky</td>		                          
-					                          <td>7</td>
-					                        </tr>
-					                        <tr>
-					                          <td>6</td>
-					                          <td>Dede</td>
-					                          <td>Christina</td>		                          
-					                          <td>7</td>
-					                        </tr>		  
-					                        <tr>
-					                          <td>7</td>
-					                          <td>Lucila</td>
-					                          <td>Baxa</td>		                          
-					                          <td>6.8</td>
-					                        </tr>
-					                        <tr>
-					                          <td>8</td>
-					                          <td>Karren</td>
-					                          <td>Ihle</td>		                          
-					                          <td>6.5</td>
-					                        </tr>
-					                        <tr>
-					                          <td>9</td>
-					                          <td>Barrie</td>
-					                          <td>Moutray</td>		                          
-					                          <td>6.5</td>
-					                        </tr>	
-					                        <tr>
-					                          <td>10</td>
-					                          <td>Stella</td>
-					                          <td>Borda</td>		                          
-					                          <td>6.5</td>
-					                        </tr>		                        
-                      					</tbody>
-                    				</table>                    	
-                  				</ul>    
-                			</div>
-              			</div>              
-            </div>						
+            </div>
             <br>
           </div>
         </main>

@@ -8,14 +8,14 @@ $( document ).ready(function() {
       
     	if(username==='Test1'){
     		if(password==='test'){    			
-    			document.location.href = "http://localhost:8080/garagefest/home.html";
+    			document.location.href = "http://l12100943:8080/garagefest/home.html";
     		}else{
     			alert("Invalid password");
-    			document.location.href = "http://localhost:8080/garagefest";
+    			document.location.href = "http://l12100943:8080/garagefest";
     		}
     	}else{
     		alert("Invalid User");
-			document.location.href = "http://localhost:8080/garagefest";
+			document.location.href = "http://l12100943:8080/garagefest";
     	}
     
     });
